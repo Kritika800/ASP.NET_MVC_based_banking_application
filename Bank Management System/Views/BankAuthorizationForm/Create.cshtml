@@ -1,0 +1,142 @@
+﻿@model Bank_Management_System.Models.BankAuthorizationForm
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <center><h6>BANK AUTHORIZATION FORM</h6></center>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+
+    <style>
+        body {
+            background-color: azure;
+        }
+    </style>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.City, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Firstname, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Firstname, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Firstname, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Lastname, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Lastname, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Lastname, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.EmailId, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.EmailId, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.EmailId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Phone_No, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Phone_No, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Phone_No, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.BankName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.BankName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.BankName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.BankBranch, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.BankBranch, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.BankBranch, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.BankPhonenumber, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.BankPhonenumber, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.BankPhonenumber, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <h6>Choose the bank Account type from the drop down list and confirm the same by writing in the textbox below.</h6>
+    <input type="checkbox" id="type1" name="Personal checking">
+    <label for="Personal checking"> Personal checking</label>
+    <input type="checkbox" id="type2" name="Buisness checking">
+    <label for="Buisness checking"> Buisness checking</label>
+    <input type="checkbox" id="type3" name="Buisness Saving ">
+    <label for="Buisness Saving"> Buisness Saving</label><br>
+    <input type="checkbox" id="type4" name="Personal saving">
+    <label for="Personal saving"> Personal saving</label><br>
+    <input type="checkbox" id="type5" name="Other">
+    <label for="other"> other</label><br>
+    <input type="text" placeholder="Type of Account" />
+    <br />
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Confirm_bank_Account_Type, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Confirm_bank_Account_Type, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Confirm_bank_Account_Type, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div>
+        <h6>Autorization Agreement For Direct Deposit</h6>
+        <input type="checkbox" name="Agreement" required />
+        <label for="Agreement">I Authorize you to withdraw the funds each month equal to my monthly invoice amount.This Authorization is to remain in force until the company recieves nuy termination notice.</label><br />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(model => model.Signature, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Signature, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Signature, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <br />
+
+
+    
+    <div>
+        <input type="checkbox" name="Agreement2" required />
+        <label for="Agreement2">Are you sure You want to submit the form?.If yes click the checkbox.</label>
+
+    </div>
+    <br />
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Submit" class="btn btn-success" />
+        </div>
+    </div>
+</div>
+}

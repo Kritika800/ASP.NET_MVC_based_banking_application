@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Bank Rating">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Company_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Financial_Institution_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Financial_Institution_Contact_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Account_In_The_name_Of_FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="Balance" Type="varchar" MaxLength="50" />
+          <Property Name="Signature" Type="varchar" MaxLength="50" />
+          <Property Name="Confirm_Bank_ACCOUNT_TYPE" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Bank_Account_Registration">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Confirm_Type_Of_Bank_ACCOUNT" Type="varchar" MaxLength="50" />
+          <Property Name="Confrim_Type_Of_CURRENCY" Type="varchar" MaxLength="50" />
+          <Property Name="First_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Last_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Contact_Number" Type="bigint" />
+          <Property Name="Email_Address" Type="varchar" MaxLength="50" />
+          <Property Name="Mailing_Home_Address" Type="varchar" MaxLength="50" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="State" Type="varchar" MaxLength="50" />
+          <Property Name="Postal_Code" Type="int" />
+          <Property Name="Country" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="BankAuthorizationForm">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="Firstname" Type="varchar" MaxLength="50" />
+          <Property Name="Lastname" Type="varchar" MaxLength="50" />
+          <Property Name="EmailId" Type="varchar" MaxLength="50" />
+          <Property Name="Phone_No" Type="bigint" />
+          <Property Name="BankName" Type="varchar" MaxLength="50" />
+          <Property Name="BankBranch" Type="varchar" MaxLength="50" />
+          <Property Name="BankPhonenumber" Type="varchar" MaxLength="50" />
+          <Property Name="Type_OF_BankAccount" Type="varchar" MaxLength="50" />
+          <Property Name="Confirm_bank_Account_Type" Type="varchar" MaxLength="50" />
+          <Property Name="Signature" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Credit Request form">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Parent_Name" Type="varchar" MaxLength="50" />
+          <Property Name="PermanentAddress_Line1" Type="varchar" MaxLength="50" />
+          <Property Name="PermanentAddress_Line2" Type="varchar" MaxLength="50" />
+          <Property Name="PermanentAddress_Line3" Type="varchar" MaxLength="50" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="Region" Type="varchar" MaxLength="50" />
+          <Property Name="PostalCode" Type="int" />
+          <Property Name="Country" Type="varchar" MaxLength="50" />
+          <Property Name="Contact_Number" Type="varchar" MaxLength="50" />
+          <Property Name="First_Participant_Name" Type="varchar" MaxLength="50" />
+          <Property Name="DateOfBirth" Type="date" />
+          <Property Name="Activity" Type="varchar" MaxLength="50" />
+          <Property Name="Class_Code" Type="varchar" MaxLength="50" />
+          <Property Name="Start_Date" Type="date" />
+          <Property Name="Amount_Paid" Type="int" />
+          <Property Name="Reason_For_CreditRequest" Type="varchar" MaxLength="50" />
+          <Property Name="Employee_Signature" Type="varbinary" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Direct_Deposit_Authorization_Form">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Company_Name" Type="varchar" MaxLength="50" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="AddressLine1" Type="varchar" MaxLength="50" />
+          <Property Name="Address_Line2" Type="varchar" MaxLength="50" />
+          <Property Name="Address_Line3" Type="varchar" MaxLength="50" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="Region" Type="varchar" MaxLength="50" />
+          <Property Name="PostalCode" Type="varchar" MaxLength="50" />
+          <Property Name="Country" Type="varchar" MaxLength="50" />
+          <Property Name="Name_Of_Bank" Type="varchar" MaxLength="50" />
+          <Property Name="Amount_ToBeDeposited" Type="varchar" MaxLength="50" />
+          <Property Name="Employees_Signature" Type="varchar" MaxLength="50" />
+          <Property Name="Confirm_Type_oFAccount" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LoanApplicationForm">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="Desired_Loan_Amount" Type="varchar" MaxLength="50" />
+          <Property Name="Annual_Income" Type="varchar" MaxLength="50" />
+          <Property Name="Your_Name" Type="varchar" MaxLength="50" />
+          <Property Name="BirthDate" Type="date" />
+          <Property Name="Phone_Number" Type="bigint" />
+          <Property Name="EmailAddress" Type="varchar" MaxLength="50" />
+          <Property Name="Home_Address" Type="varchar" MaxLength="50" />
+          <Property Name="Line_2" Type="varchar" MaxLength="50" />
+          <Property Name="Line_3" Type="varchar" MaxLength="50" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="Region" Type="varchar" MaxLength="50" />
+          <Property Name="Postal_Code" Type="varchar" MaxLength="50" />
+          <Property Name="Country" Type="varchar" MaxLength="50" />
+          <Property Name="Job_Title" Type="varchar" MaxLength="50" />
+          <Property Name="Employer_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Confirm_Reason_Of_LOAN" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="Bank Rating" EntityType="Self.Bank Rating" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Bank_Account_Registration" EntityType="Self.Bank_Account_Registration" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BankAuthorizationForm" EntityType="Self.BankAuthorizationForm" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Credit Request form" EntityType="Self.Credit Request form" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Direct_Deposit_Authorization_Form" EntityType="Self.Direct_Deposit_Authorization_Form" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LoanApplicationForm" EntityType="Self.LoanApplicationForm" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Bank_Rating">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Company_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Financial_Institution_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Financial_Institution_Contact_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Account_In_The_name_Of_FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Balance" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Signature" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Confirm_Bank_ACCOUNT_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Bank_Account_Registration">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Confirm_Type_Of_Bank_ACCOUNT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Confrim_Type_Of_CURRENCY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Contact_Number" Type="Int64" />
+          <Property Name="Email_Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Mailing_Home_Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Postal_Code" Type="Int32" />
+          <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="BankAuthorizationForm">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Phone_No" Type="Int64" />
+          <Property Name="BankName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BankBranch" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BankPhonenumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Type_OF_BankAccount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Confirm_bank_Account_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Signature" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Credit_Request_form">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Parent_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PermanentAddress_Line1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PermanentAddress_Line2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PermanentAddress_Line3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Region" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PostalCode" Type="Int32" />
+          <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Contact_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="First_Participant_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
+          <Property Name="Activity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Class_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Start_Date" Type="DateTime" Precision="0" />
+          <Property Name="Amount_Paid" Type="Int32" />
+          <Property Name="Reason_For_CreditRequest" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Employee_Signature" Type="Binary" MaxLength="50" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Direct_Deposit_Authorization_Form">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Company_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AddressLine1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address_Line2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address_Line3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Region" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PostalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Name_Of_Bank" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Amount_ToBeDeposited" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Employees_Signature" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Confirm_Type_oFAccount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="LoanApplicationForm">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="Desired_Loan_Amount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Annual_Income" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Your_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BirthDate" Type="DateTime" Precision="0" />
+          <Property Name="Phone_Number" Type="Int64" />
+          <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Home_Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Line_2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Line_3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Region" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Postal_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Job_Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Employer_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Confirm_Reason_Of_LOAN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="Bank_Management_SystemEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Bank_Ratings" EntityType="Self.Bank_Rating" />
+          <EntitySet Name="Bank_Account_Registration" EntityType="Self.Bank_Account_Registration" />
+          <EntitySet Name="BankAuthorizationForms" EntityType="Self.BankAuthorizationForm" />
+          <EntitySet Name="Credit_Request_forms" EntityType="Self.Credit_Request_form" />
+          <EntitySet Name="Direct_Deposit_Authorization_Form" EntityType="Self.Direct_Deposit_Authorization_Form" />
+          <EntitySet Name="LoanApplicationForms" EntityType="Self.LoanApplicationForm" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Bank_Management_SystemEntities2">
+          <EntitySetMapping Name="Bank_Ratings">
+            <EntityTypeMapping TypeName="Model.Bank_Rating">
+              <MappingFragment StoreEntitySet="Bank Rating">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Company_Name" ColumnName="Company_Name" />
+                <ScalarProperty Name="Financial_Institution_Name" ColumnName="Financial_Institution_Name" />
+                <ScalarProperty Name="Financial_Institution_Contact_Name" ColumnName="Financial_Institution_Contact_Name" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Account_In_The_name_Of_FirstName" ColumnName="Account_In_The_name_Of_FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Signature" ColumnName="Signature" />
+                <ScalarProperty Name="Confirm_Bank_ACCOUNT_TYPE" ColumnName="Confirm_Bank_ACCOUNT_TYPE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bank_Account_Registration">
+            <EntityTypeMapping TypeName="Model.Bank_Account_Registration">
+              <MappingFragment StoreEntitySet="Bank_Account_Registration">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Confirm_Type_Of_Bank_ACCOUNT" ColumnName="Confirm_Type_Of_Bank_ACCOUNT" />
+                <ScalarProperty Name="Confrim_Type_Of_CURRENCY" ColumnName="Confrim_Type_Of_CURRENCY" />
+                <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+                <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+                <ScalarProperty Name="Contact_Number" ColumnName="Contact_Number" />
+                <ScalarProperty Name="Email_Address" ColumnName="Email_Address" />
+                <ScalarProperty Name="Mailing_Home_Address" ColumnName="Mailing_Home_Address" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Postal_Code" ColumnName="Postal_Code" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BankAuthorizationForms">
+            <EntityTypeMapping TypeName="Model.BankAuthorizationForm">
+              <MappingFragment StoreEntitySet="BankAuthorizationForm">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="Phone_No" ColumnName="Phone_No" />
+                <ScalarProperty Name="BankName" ColumnName="BankName" />
+                <ScalarProperty Name="BankBranch" ColumnName="BankBranch" />
+                <ScalarProperty Name="BankPhonenumber" ColumnName="BankPhonenumber" />
+                <ScalarProperty Name="Type_OF_BankAccount" ColumnName="Type_OF_BankAccount" />
+                <ScalarProperty Name="Confirm_bank_Account_Type" ColumnName="Confirm_bank_Account_Type" />
+                <ScalarProperty Name="Signature" ColumnName="Signature" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Credit_Request_forms">
+            <EntityTypeMapping TypeName="Model.Credit_Request_form">
+              <MappingFragment StoreEntitySet="Credit Request form">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Parent_Name" ColumnName="Parent_Name" />
+                <ScalarProperty Name="PermanentAddress_Line1" ColumnName="PermanentAddress_Line1" />
+                <ScalarProperty Name="PermanentAddress_Line2" ColumnName="PermanentAddress_Line2" />
+                <ScalarProperty Name="PermanentAddress_Line3" ColumnName="PermanentAddress_Line3" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Region" ColumnName="Region" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Contact_Number" ColumnName="Contact_Number" />
+                <ScalarProperty Name="First_Participant_Name" ColumnName="First_Participant_Name" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="Activity" ColumnName="Activity" />
+                <ScalarProperty Name="Class_Code" ColumnName="Class_Code" />
+                <ScalarProperty Name="Start_Date" ColumnName="Start_Date" />
+                <ScalarProperty Name="Amount_Paid" ColumnName="Amount_Paid" />
+                <ScalarProperty Name="Reason_For_CreditRequest" ColumnName="Reason_For_CreditRequest" />
+                <ScalarProperty Name="Employee_Signature" ColumnName="Employee_Signature" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Direct_Deposit_Authorization_Form">
+            <EntityTypeMapping TypeName="Model.Direct_Deposit_Authorization_Form">
+              <MappingFragment StoreEntitySet="Direct_Deposit_Authorization_Form">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Company_Name" ColumnName="Company_Name" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+                <ScalarProperty Name="Address_Line2" ColumnName="Address_Line2" />
+                <ScalarProperty Name="Address_Line3" ColumnName="Address_Line3" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Region" ColumnName="Region" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Name_Of_Bank" ColumnName="Name_Of_Bank" />
+                <ScalarProperty Name="Amount_ToBeDeposited" ColumnName="Amount_ToBeDeposited" />
+                <ScalarProperty Name="Employees_Signature" ColumnName="Employees_Signature" />
+                <ScalarProperty Name="Confirm_Type_oFAccount" ColumnName="Confirm_Type_oFAccount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LoanApplicationForms">
+            <EntityTypeMapping TypeName="Model.LoanApplicationForm">
+              <MappingFragment StoreEntitySet="LoanApplicationForm">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Desired_Loan_Amount" ColumnName="Desired_Loan_Amount" />
+                <ScalarProperty Name="Annual_Income" ColumnName="Annual_Income" />
+                <ScalarProperty Name="Your_Name" ColumnName="Your_Name" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="Phone_Number" ColumnName="Phone_Number" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="Home_Address" ColumnName="Home_Address" />
+                <ScalarProperty Name="Line_2" ColumnName="Line_2" />
+                <ScalarProperty Name="Line_3" ColumnName="Line_3" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Region" ColumnName="Region" />
+                <ScalarProperty Name="Postal_Code" ColumnName="Postal_Code" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Job_Title" ColumnName="Job_Title" />
+                <ScalarProperty Name="Employer_Name" ColumnName="Employer_Name" />
+                <ScalarProperty Name="Confirm_Reason_Of_LOAN" ColumnName="Confirm_Reason_Of_LOAN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
