@@ -72,7 +72,7 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.PostalCode, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.PostalCode, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.PasswordFor(model => model.PostalCode, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.PostalCode, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -88,7 +88,7 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.Contact_Number, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.Contact_Number, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.PasswordFor(model => model.Contact_Number, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.Contact_Number, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -128,7 +128,7 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.Start_Date, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.Start_Date, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.PasswordFor(model => model.Start_Date, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.Start_Date, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -144,7 +144,7 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.Reason_For_CreditRequest, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.Reason_For_CreditRequest, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.PasswordFor(model => model.Reason_For_CreditRequest, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.Reason_For_CreditRequest, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -152,7 +152,7 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.Employee_Signature, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.Employee_Signature, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.PasswordFor(model => model.Employee_Signature, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.Employee_Signature, "", new { @class = "text-danger" })
                 </div>
             </div>
